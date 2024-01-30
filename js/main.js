@@ -46,12 +46,15 @@ const frutasEscogidas = agregarProductos();
 
 if (frutasEscogidas.length > 0) {
     console.log('Frutas en el carrito:');
+    let totalCompra = 0;
     for (const fruta of frutasEscogidas) {
         console.log('- ' + fruta.nombre);
+        totalCompra += fruta.precio;
     }
+    const mensajeTotal = 'Total de la compra: ' + totalCompra;
+    alert(mensajeTotal);
 } else {
     console.log('No has agregado ninguna fruta al carrito.');
 }
 
-alert('Gracias por comprar en el mercado "Nativitas" regresa pronto');
-
+alert('Gracias por comprar en el mercado "Nativitas"');
